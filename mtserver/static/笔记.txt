@@ -1,0 +1,5 @@
+1.在执行BScroll时   
+    一：注意异步调用法  this.$nextTick()  里面去传参数  这里有一个说法 如果使用箭头函数的方式，那么this指针
+        将会被保存，但如果直接传一个参数进去，那么this指针不会被保存  且需要在外面定义const that = this
+    二：BScroll 务必有两个div 外层为wrapper容器 内层为content容器 content里面才是ui>li 否则不会滚动
+    三：通过在标签上定义ref  ，那么在属性上就可以通过this.$refs.xxx来找到对应的元素
